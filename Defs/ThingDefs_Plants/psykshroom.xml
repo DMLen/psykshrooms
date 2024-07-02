@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="CavePlantBase">
+    <defName>Plant_Psykshroom</defName>
+    <label>psykshroom</label>
+    <description>First bio-engineered by some urbworld kingpin a long time ago for massive psychite grow-ops in the subterranean fungusariums, the psykshroom is a curious fungus that has found its way into many subterranean colonies on the rim. It is believed to be a variant of nutrifungus (or psychedelic mushrooms from old earth) that has been modified to produce psychite-related compounds. 
+    
+The harvested caps of the psykshroom can be used as a substitute for psychoid leaves when producing drugs. Psykshrooms produce less product and grow slower compared to psychoid plants, however psykshrooms do have the advantage of being edible, and the ability to grow on fungal gravel. Exposing it to any kind of light, including darklights, will kill it.</description>
+    <descriptionHyperlinks>
+      <HediffDef>PsykcapsHigh</HediffDef>
+      <ThingDef>RawPsykcaps</ThingDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.10</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Psykmod/Psykshroom</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RawPsykcaps</harvestedThingDef>
+      <harvestYield>5</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0</topWindExposure>
+      <growDays>11</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.3~0.65</visualSizeRange>
+      <drugForHarvestPurposes>True</drugForHarvestPurposes>
+      <maxMeshCount>4</maxMeshCount>
+      <sowMinSkill>6</sowMinSkill>
+    </plant>
+  </ThingDef>
+
+</Defs>

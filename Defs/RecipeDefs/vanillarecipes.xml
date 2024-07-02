@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- psychite tea -->
+  <RecipeDef>
+    <defName>Psykshroom_Make_PsychiteTea</defName>
+    <label>make psychite tea from psykcaps</label>
+    <description>Make a psychite tea from psykcaps.</description>
+    <jobString>Making a psychite tea from psykcaps.</jobString>
+
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workSkill>Cooking</workSkill>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+	<workAmount>400</workAmount>
+    <recipeUsers>
+      <li>Campfire</li>
+    	<li>ElectricStove</li>
+    	<li>FueledStove</li>
+    </recipeUsers>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPsykcaps</li>
+          </thingDefs>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawPsykcaps</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+
+    <products>
+      <PsychiteTea>1</PsychiteTea>
+    </products>
+
+	<researchPrerequisite>PsychoidBrewing</researchPrerequisite>
+
+    <skillRequirements>
+      <Cooking>2</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+
+  <!-- psychite tea x4 bulk recipe -->
+  <RecipeDef>
+    <defName>Psykshroom_Make_PsychiteTeaBulk</defName>
+    <label>make psychite tea from psykcaps x4</label>
+    <description>Make psychite tea from psykcaps x4.</description>
+    <jobString>Making psychite tea from psykcaps x4.</jobString>
+
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workSkill>Cooking</workSkill>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <recipeUsers>
+      <li>Campfire</li>
+    	<li>ElectricStove</li>
+    	<li>FueledStove</li>
+    </recipeUsers>
+
+	<workAmount>1600</workAmount>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPsykcaps</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawPsykcaps</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+
+    <products>
+      <PsychiteTea>4</PsychiteTea>
+    </products>
+
+	<researchPrerequisite>PsychoidBrewing</researchPrerequisite>
+
+    <skillRequirements>
+      <Cooking>2</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+
+  <!-- flake -->
+  <RecipeDef>
+    <defName>Psykshroom_Make_Flake</defName>
+    <label>make flake from psykcaps</label>
+    <description>Make flake from psykcaps.</description>
+    <jobString>Making flake from psykcaps.</jobString>
+
+    <effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_Drug</soundWorking>
+    <workSkill>Intellectual</workSkill>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workAmount>250</workAmount>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPsykcaps</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawPsykcaps</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+
+    <products>
+      <Flake>1</Flake>
+    </products>
+
+	<researchPrerequisite>PsychiteRefining</researchPrerequisite>
+
+  </RecipeDef>
+
+  <!-- flake 4x bulk -->
+  <RecipeDef>
+    <defName>Psykshroom_Make_FlakeBulk</defName>
+    <label>make flake from psykcaps 4x</label>
+    <description>Make flake from psykcaps 4x.</description>
+    <jobString>Making flake from psykcaps 4x.</jobString>
+
+    <effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_Drug</soundWorking>
+    <workSkill>Intellectual</workSkill>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workAmount>1000</workAmount>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPsykcaps</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawPsykcaps</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+
+    <products>
+      <Flake>4</Flake>
+    </products>
+
+	<researchPrerequisite>PsychiteRefining</researchPrerequisite>
+
+  </RecipeDef>
+
+  <!-- yayo -->
+  <RecipeDef>
+    <defName>Psykshroom_Make_Yayo</defName>
+    <label>make yayo from psykcaps</label>
+    <description>Make yayo from psykcaps.</description>
+    <jobString>Making yayo from psykcaps.</jobString>
+
+    <effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_Drug</soundWorking>
+    <workSkill>Intellectual</workSkill>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workAmount>350</workAmount>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPsykcaps</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawPsykcaps</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+
+    <products>
+      <Yayo>1</Yayo>
+    </products>
+
+	<researchPrerequisite>PsychiteRefining</researchPrerequisite>
+
+  </RecipeDef>
+
+  <!-- yayo 4x bulk -->
+  <RecipeDef>
+    <defName>Psykshroom_Make_YayoBulk</defName>
+    <label>make yayo from psykcaps 4x</label>
+    <description>Make yayo from psykcaps 4x.</description>
+    <jobString>Making yayo from psykcaps 4x.</jobString>
+
+    <effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_Drug</soundWorking>
+    <workSkill>Intellectual</workSkill>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workAmount>1400</workAmount>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPsykcaps</li>
+          </thingDefs>
+        </filter>
+        <count>32</count>
+      </li>
+    </ingredients>
+
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawPsykcaps</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+
+    <products>
+      <Yayo>4</Yayo>
+    </products>
+
+	<researchPrerequisite>PsychiteRefining</researchPrerequisite>
+
+  </RecipeDef>
+
+</Defs>

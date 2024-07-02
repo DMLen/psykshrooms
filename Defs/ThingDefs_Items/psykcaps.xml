@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="RoughPlantBase">
+    <defName>RawPsykcaps</defName>
+    <label>psykcaps</label>
+    <description>The harvested caps of the psykshroom fungus. Just like psychoid leaves, these can be refined at a drug lab into the various forms of the stimulant drug psychite such as flake and yayo. 
+    
+These can also be eaten raw, for a mild and short-lived high. The raw psykcaps also contain psychedelic compounds that cause hallucinations and hinder clear vision when consumed, as well as slightly increasing psychic sensitivity. It is difficult, albeit possible, to develop a psychite addiction from eating raw psykcaps.</description>
+    <descriptionHyperlinks>
+      <HediffDef>PsykcapsHigh</HediffDef>
+      <ThingDef>Plant_Psykshroom</ThingDef>
+    </descriptionHyperlinks>
+    <possessionCount>10</possessionCount>
+    <graphicData>
+      <texPath>Psykmod/Harvested</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Flammability>0</Flammability>
+      <Nutrition>0.025</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Drug">
+        <chemical>Psychite</chemical>
+        <addictiveness>0.01</addictiveness>
+        <minToleranceToAddict>0.10</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.05</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+        <listOrder>29</listOrder>
+			</li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+
+    <ingestible>
+    <baseIngestTicks>100</baseIngestTicks>
+    <chairSearchRadius>4</chairSearchRadius>
+    <preferability>DesperateOnly</preferability>
+    <joyKind>Chemical</joyKind>
+    <joy>0.25</joy>
+    <nurseable>true</nurseable>
+    <foodType>Fungus</foodType>
+    <drugCategory>Social</drugCategory>
+    <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PsykcapsHigh</hediffDef>
+          <severity>0.5</severity>
+          <toleranceChemical>Psychite</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PsychiteTolerance</hediffDef>
+          <toleranceChemical>Psychite</toleranceChemical>
+          <severity>0.02</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+    </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+  <!-- psykcaps high -->
+
+  <HediffDef>
+    <defName>PsykcapsHigh</defName>
+    <label>high on psykshrooms</label>
+    <labelNoun>a psykshrooms high</labelNoun>
+    <description>Active psykshroom compounds in the bloodstream from eating psykcaps. Generates a mild high, with some psychedelic effects that cause hallucinations and hinder vision.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2.5</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <painOffset>-0.2</painOffset>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>-0.2</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>-0.1</offset>
+            </li>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>-0.2</offset>
+            </li>
+          </capMods>
+          <statOffsets>
+            <PsychicSensitivity>+0.1</PsychicSensitivity>
+          </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>PsykcapsHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PsykcapsHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>high on psykcaps</label>
+        <description>I ate some funny mushrooms. I think I'm seeing things, but it feels... awesome...</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>
