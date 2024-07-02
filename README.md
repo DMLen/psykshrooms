@@ -6,4 +6,4 @@ A subterranean solution for the aspiring psychite kingpin. Adds Psykshroom, a ty
 ### Credits
 **Lambda** for creating the XML
 
-Steam Upload: <not yet published to steam>
+Steam Upload: (not yet published to steam)
