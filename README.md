@@ -23,6 +23,7 @@ Exactly like you do with psychoid! Psykshrooms can be planted from the get-go, b
 
 ### Credits
 **Lambda** for creating the XML
+
 **DetVisor** for creating the textures
 
 Steam Upload: https://steamcommunity.com/sharedfiles/filedetails/?id=3280268952
