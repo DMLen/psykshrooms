@@ -2,9 +2,9 @@
 <Defs>
   
 <ThingDef ParentName="DrugBase">
-<defName>psykwine</defName>
-<label>Crömin</label>
-<description>A strong and potent mushroom wine containing psychite and alcohol, fermented from the subterranean psykshroom fungus. Crömin glows for unknown reasons, and is customarily stored inside heavy earthenware pots. Opening the vessel, it smells musty, earthy, and stale. But once you get past the smell, the flavour is surprisingly sweet with herbal tones. How crömin came to first be produced is unknown, but it's believed to have originally just been a way to smuggle vast volumes of psychite out of the subterranean fungusariums where the psykshrooms were first engineered and grown. Only some time later did people realize it tasted good too, and the rest is history.
+<defName>Psykwine</defName>
+<label>Croomin</label>
+<description>A strong, glowing liquor containing psychite and alcohol, Croomin is the product of fermented subterranean fungi. Opening the large earthen pot, it smells musty, earthy, and stale but once you get past that the flavour is markedly sweet with herbal overtones. How croomin came to be produced is unknown, but it's believed to have been an accident. Psykshroom smugglers keeping their stocks mushed together in damp unclean containers for so long it became something new entirely. Only after did they realise what they made was a worthy product in its own right. The rest is history.
 
 This wine is capable of delivering a potent hit of psychite and alcohol to the imbiber. This contains far more alcohol than beer, and nearly as much psychite as a hit of yayo. Effects scale with drunkenness, and hallucinations manifest at higher levels. It's very easy to accidentally overdose, so be careful!</description>
 <descriptionHyperlinks>
@@ -89,9 +89,13 @@ This wine is capable of delivering a potent hit of psychite and alcohol to the i
         </li>
 
     <li Class="CompProperties_Glower">
-		<glowRadius>2</glowRadius>
+		<glowRadius>1</glowRadius>
 		<glowColor>(177,99,203,0)</glowColor>
 		</li>
+
+    <li>
+    <compClass>CompQuality</compClass>
+    </li>
 
 </comps>
 
@@ -102,9 +106,9 @@ This wine is capable of delivering a potent hit of psychite and alcohol to the i
 
 <HediffDef>
     <defName>PsykwineHigh</defName>
-    <label>psykwine drunk</label>
-    <labelNoun>drunk on psykwine</labelNoun>
-    <description>Psychite and alcohol in the bloodstream from psykwine. Produces very similar effects to yayo, scaling with drunkenness. Higher levels cause hallucinations that hinder vision.</description>
+    <label>croomin drunk</label>
+    <labelNoun>drunk on croomin</labelNoun>
+    <description>Psychite and alcohol in the bloodstream from drinking croomin. Produces very similar effects to yayo, scaling with drunkenness. Higher levels cause hallucinations that hinder vision.</description>
     <hediffClass>Hediff_Alcohol</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -139,7 +143,10 @@ This wine is capable of delivering a potent hit of psychite and alcohol to the i
               <capacity>Moving</capacity>
               <offset>0.10</offset>
             </li>
-          </capMods>	
+          </capMods>
+          <statOffsets>
+            <PsychicSensitivity>+0.3</PsychicSensitivity>
+          </statOffsets>	
         </li>
 
         <!--drunk is the "baseline", with identical effects to yayo. +15% moving, 50% pain, 33% sleep fall rate-->
@@ -158,6 +165,9 @@ This wine is capable of delivering a potent hit of psychite and alcohol to the i
             <offset>-0.2</offset>
             </li>
           </capMods>
+          <statOffsets>
+            <PsychicSensitivity>+0.4</PsychicSensitivity>
+          </statOffsets>
         </li>
 
         <li>
@@ -175,6 +185,9 @@ This wine is capable of delivering a potent hit of psychite and alcohol to the i
               <offset>-0.3</offset>
             </li>
           </capMods>	
+          <statOffsets>
+            <PsychicSensitivity>+0.5</PsychicSensitivity>
+          </statOffsets>
 
         </li>
         <li>
@@ -186,6 +199,9 @@ This wine is capable of delivering a potent hit of psychite and alcohol to the i
               <setMax>0.1</setMax>
             </li>
             </capMods>
+            <statOffsets>
+            <PsychicSensitivity>+0.6</PsychicSensitivity>
+          </statOffsets>
             <hediffGivers>
               <li Class="HediffGiver_Random">
                 <hediff>ChemicalDamageModerate</hediff>
@@ -209,22 +225,22 @@ This wine is capable of delivering a potent hit of psychite and alcohol to the i
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>psykwine warmth</label>
+        <label>croomin warmth</label>
         <description>My mind feels clearer and I have so much energy. I quite like this.</description>
         <baseMoodEffect>12</baseMoodEffect>
       </li>
       <li>
-        <label>psykwine inebriation</label>
+        <label>croomin inebriation</label>
         <description>My mind is going so fast. This feels good. Very good.</description>
         <baseMoodEffect>16</baseMoodEffect>
       </li>     
       <li>
-        <label>psykwine drunk</label>
+        <label>croomin drunk</label>
         <description>I'm alive! So, so alive! Woo!</description>
         <baseMoodEffect>22</baseMoodEffect>
       </li>
       <li>
-        <label>psykwine hammered</label>
+        <label>croomin hammered</label>
         <description>What was that? No, show me. It's okay. It looked really interesting. Show me. SHOW ME!</description>
         <baseMoodEffect>28</baseMoodEffect>
       </li>   

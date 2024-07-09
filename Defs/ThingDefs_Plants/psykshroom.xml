@@ -10,7 +10,7 @@ The harvested caps of the psykshroom can be used as a substitute for psychoid le
     <descriptionHyperlinks>
       <HediffDef>PsykcapsHigh</HediffDef>
       <ThingDef>RawPsykcaps</ThingDef>
-      <ThingDef>psykwine</ThingDef>
+      <ThingDef>Psykwine</ThingDef>
     </descriptionHyperlinks>
     <statBases>
       <MaxHitPoints>85</MaxHitPoints>
