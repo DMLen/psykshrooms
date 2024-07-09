@@ -3,10 +3,15 @@
   
 <ThingDef ParentName="DrugBase">
 <defName>psykwine</defName>
-<label>Psykwine</label>
-<description>A strong, potent wine containing psychite and alcohol, fermented from the subterranean psykshroom fungus. Opening the large earthern pot, it smells musty, earthy, and stale. But once you get past the smell, the flavour is surprisingly sweet with herbal tones. How psykwine came to first be produced is unknown, but it's believed to have originally just been a way to smuggle psychite out of the subterranean fungusariums where the psykshrooms were first grown. Only some time later did people realize it tasted good too, and the rest is history.
+<label>Crömin</label>
+<description>A strong and potent mushroom wine containing psychite and alcohol, fermented from the subterranean psykshroom fungus. Crömin glows for unknown reasons, and is customarily stored inside heavy earthenware pots. Opening the vessel, it smells musty, earthy, and stale. But once you get past the smell, the flavour is surprisingly sweet with herbal tones. How crömin came to first be produced is unknown, but it's believed to have originally just been a way to smuggle vast volumes of psychite out of the subterranean fungusariums where the psykshrooms were first engineered and grown. Only some time later did people realize it tasted good too, and the rest is history.
 
-While the psychedelic effects of raw psykcaps are lost during the fermenting process, this wine is still capable of delivering a potent hit of psychite and alcohol to the imbiber. This contains as much alcohol as vodka, and nearly as much psychite as a hit of yayo. It's very easy to accidentally overdose, so be careful!</description>
+This wine is capable of delivering a potent hit of psychite and alcohol to the imbiber. This contains far more alcohol than beer, and nearly as much psychite as a hit of yayo. Effects scale with drunkenness, and hallucinations manifest at higher levels. It's very easy to accidentally overdose, so be careful!</description>
+<descriptionHyperlinks>
+      <HediffDef>PsykwineHigh</HediffDef>
+      <ThingDef>Plant_Psykshroom</ThingDef>
+      <ThingDef>RawPsykcaps</ThingDef>
+</descriptionHyperlinks>
 <graphicData>
     <texPath>Psykmod/Psykwine</texPath>
     <graphicClass>Graphic_StackCount</graphicClass>
@@ -45,7 +50,7 @@ While the psychedelic effects of raw psykcaps are lost during the fermenting pro
 
     <li Class="IngestionOutcomeDoer_GiveHediff">
         <hediffDef>PsychiteTolerance</hediffDef>
-        <severity>0.030</severity>
+        <severity>0.025</severity>
                 <divideByBodySize>true</divideByBodySize>
     </li>
 
@@ -77,11 +82,16 @@ While the psychedelic effects of raw psykcaps are lost during the fermenting pro
     <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
     <listOrder>100</listOrder>
     <overdoseSeverityOffset>
-        <min>0.15</min>
-        <max>0.32</max>
+        <min>0.13</min>
+        <max>0.30</max>
     </overdoseSeverityOffset>
             <largeOverdoseChance>0.01</largeOverdoseChance>
         </li>
+
+    <li Class="CompProperties_Glower">
+		<glowRadius>2</glowRadius>
+		<glowColor>(177,99,203,0)</glowColor>
+		</li>
 
 </comps>
 
@@ -94,7 +104,7 @@ While the psychedelic effects of raw psykcaps are lost during the fermenting pro
     <defName>PsykwineHigh</defName>
     <label>psykwine drunk</label>
     <labelNoun>drunk on psykwine</labelNoun>
-    <description>Psychite and alcohol in the bloodstream from psykwine. Produces very similar effects to yayo, scaling with drunkenness.</description>
+    <description>Psychite and alcohol in the bloodstream from psykwine. Produces very similar effects to yayo, scaling with drunkenness. Higher levels cause hallucinations that hinder vision.</description>
     <hediffClass>Hediff_Alcohol</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -109,13 +119,12 @@ While the psychedelic effects of raw psykcaps are lost during the fermenting pro
     <stages>
         <li>
             <label>warm</label>
-
-            <painFactor>0.5</painFactor>
-            <restFallFactor>0.33</restFallFactor>
+            <painFactor>0.7</painFactor>
+            <restFallFactor>0.55</restFallFactor>
             <capMods>
             <li>
               <capacity>Moving</capacity>
-              <offset>0.15</offset>
+              <offset>0.05</offset>
             </li>
           </capMods>	
 
@@ -123,7 +132,20 @@ While the psychedelic effects of raw psykcaps are lost during the fermenting pro
         <li>
             <minSeverity>0.25</minSeverity>
             <label>tipsy</label>
+            <painFactor>0.6</painFactor>
+            <restFallFactor>0.44</restFallFactor>
+            <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.10</offset>
+            </li>
+          </capMods>	
+        </li>
 
+        <!--drunk is the "baseline", with identical effects to yayo. +15% moving, 50% pain, 33% sleep fall rate-->
+        <li>
+            <minSeverity>0.4</minSeverity>
+            <label>drunk</label>
             <painFactor>0.5</painFactor>
             <restFallFactor>0.33</restFallFactor>
             <capMods>
@@ -131,19 +153,9 @@ While the psychedelic effects of raw psykcaps are lost during the fermenting pro
               <capacity>Moving</capacity>
               <offset>0.15</offset>
             </li>
-          </capMods>	
-        </li>
-
-        <li>
-            <minSeverity>0.4</minSeverity>
-            <label>drunk</label>
-            
-            <painFactor>0.5</painFactor>
-            <restFallFactor>0.33</restFallFactor>
-            <capMods>
             <li>
-              <capacity>Moving</capacity>
-              <offset>0.15</offset>
+            <capacity>Sight</capacity>
+            <offset>-0.2</offset>
             </li>
           </capMods>
         </li>
@@ -151,13 +163,16 @@ While the psychedelic effects of raw psykcaps are lost during the fermenting pro
         <li>
             <minSeverity>0.7</minSeverity>
             <label>hammered</label>
-
-            <painFactor>0.5</painFactor>
-            <restFallFactor>0.33</restFallFactor>
+            <painFactor>0.4</painFactor>
+            <restFallFactor>0.22</restFallFactor>
             <capMods>
             <li>
               <capacity>Moving</capacity>
-              <offset>0.15</offset>
+              <offset>0.20</offset>
+            </li>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>-0.3</offset>
             </li>
           </capMods>	
 
@@ -170,16 +185,16 @@ While the psychedelic effects of raw psykcaps are lost during the fermenting pro
               <capacity>Consciousness</capacity>
               <setMax>0.1</setMax>
             </li>
-          </capMods>
-          <hediffGivers>
-						<li Class="HediffGiver_Random">
-							<hediff>ChemicalDamageModerate</hediff>
-							<mtbDays>10</mtbDays>
-							<partsToAffect>
-								<li>Brain</li>
-							</partsToAffect>
-						</li>
-					</hediffGivers>
+            </capMods>
+            <hediffGivers>
+              <li Class="HediffGiver_Random">
+                <hediff>ChemicalDamageModerate</hediff>
+                <mtbDays>10</mtbDays>
+                <partsToAffect>
+                  <li>Brain</li>
+                </partsToAffect>
+              </li>
+            </hediffGivers>
             
         </li>
     </stages>
@@ -195,52 +210,24 @@ While the psychedelic effects of raw psykcaps are lost during the fermenting pro
     <stages>
       <li>
         <label>psykwine warmth</label>
-        <description>I just feel a bit more relaxed after that drink. That's good.</description>
-        <baseMoodEffect>10</baseMoodEffect>
+        <description>My mind feels clearer and I have so much energy. I quite like this.</description>
+        <baseMoodEffect>12</baseMoodEffect>
       </li>
       <li>
-        <label>quite inebriated</label>
-        <description>I'm a bit wobbly! And this is quite enjoyable.</description>
-        <baseMoodEffect>14</baseMoodEffect>
+        <label>psykwine inebriation</label>
+        <description>My mind is going so fast. This feels good. Very good.</description>
+        <baseMoodEffect>16</baseMoodEffect>
       </li>     
       <li>
         <label>psykwine drunk</label>
-        <description>I feel so uninhibited and unafraid! This is a great time!</description>
-        <baseMoodEffect>20</baseMoodEffect>
+        <description>I'm alive! So, so alive! Woo!</description>
+        <baseMoodEffect>22</baseMoodEffect>
       </li>
       <li>
         <label>psykwine hammered</label>
-        <description>Wooo! What's going on?</description>
-        <baseMoodEffect>26</baseMoodEffect>
+        <description>What was that? No, show me. It's okay. It looked really interesting. Show me. SHOW ME!</description>
+        <baseMoodEffect>28</baseMoodEffect>
       </li>   
-    </stages>
-  </ThoughtDef>
-
-  <ThoughtDef>
-    <defName>Hungover</defName>
-    <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>Hangover</hediff>
-    <validWhileDespawned>true</validWhileDespawned>
-    <stages>
-      <li>
-        <label>mild hangover</label>
-        <description>The headache is almost gone.</description>
-        <baseMoodEffect>-3</baseMoodEffect>
-      </li>
-      <li>
-        <label>serious hangover</label>
-        <description>My head hurts from all that liquor.</description>
-        <baseMoodEffect>-6</baseMoodEffect>
-      </li>
-      <li>
-        <label>pounding hangover</label>
-        <description>It feels like a gaggle of geese are pecking at my skull.</description>
-        <baseMoodEffect>-12</baseMoodEffect>
-      </li>
-      <li>
-        <label>hung over (hidden)</label>
-        <visible>false</visible>
-      </li>
     </stages>
   </ThoughtDef>
 

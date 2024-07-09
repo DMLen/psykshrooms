@@ -10,6 +10,7 @@ These can also be eaten raw, for a mild and short-lived high. The raw psykcaps a
     <descriptionHyperlinks>
       <HediffDef>PsykcapsHigh</HediffDef>
       <ThingDef>Plant_Psykshroom</ThingDef>
+      <ThingDef>psykwine</ThingDef>
     </descriptionHyperlinks>
     <possessionCount>10</possessionCount>
     <graphicData>
