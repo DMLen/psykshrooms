@@ -10,6 +10,14 @@
   <li>1.5</li>
 </supportedVersions>
 
-<modVersion IgnoreIfNoMatchingField="True">1.0</modVersion>
+<modVersion IgnoreIfNoMatchingField="True">2.0</modVersion>
+
+<modDependencies>
+  <li>
+    <packageId>syrchalis.processor.framework</packageId>
+    <displayName>[SYR] Processor Framework</displayName>
+    <steamWorkshopUrl>steam://url/CommunityFilePage/3210544395</steamWorkshopUrl>
+  </li>
+</modDependencies>
 
 </ModMetaData>
