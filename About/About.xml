@@ -4,7 +4,7 @@
 <packageId>lambda.Psykshroom</packageId>
 <name>Psykshroom</name>
 <author>Lambda</author>
-<description>A subterranean solution for the aspiring psychite kingpin. Adds Psykshroom, a type of fungus that can be used to refine psychite into its related drugs! It can even be eaten raw for a weak mood buff!</description>
+<description>A subterranean solution for the aspiring psychite kingpin. Adds Psykshroom, a type of psychedelic fungus that can be used to refine psychite into its related drugs! It can even be eaten raw, or fermented into the powerful alcohol Croomin!</description>
 
 <supportedVersions>
   <li>1.5</li>
