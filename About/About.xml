@@ -10,7 +10,7 @@
   <li>1.5</li>
 </supportedVersions>
 
-<modVersion IgnoreIfNoMatchingField="True">2.0</modVersion>
+<modVersion IgnoreIfNoMatchingField="True">2.1</modVersion>
 
 <modDependencies>
   <li>
@@ -19,5 +19,9 @@
     <steamWorkshopUrl>steam://url/CommunityFilePage/3210544395</steamWorkshopUrl>
   </li>
 </modDependencies>
+
+<loadAfter>
+  <li>syrchalis.processor.framework</li>
+</loadAfter>
 
 </ModMetaData>
