@@ -10,7 +10,7 @@
   <li>1.5</li>
 </supportedVersions>
 
-<modVersion IgnoreIfNoMatchingField="True">2.1</modVersion>
+<modVersion IgnoreIfNoMatchingField="True">2.2</modVersion>
 
 <modDependencies>
   <li>
