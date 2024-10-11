@@ -6,6 +6,7 @@
   <match Class="PatchOperationSequence">
   <operations>
 
+<!-- make antibiotics 1x recipe-->
     <li Class="PatchOperationAdd">
     <xpath>Defs</xpath>
     <value>
@@ -53,9 +54,63 @@
     </products>
 	<researchPrerequisite>DrugProduction</researchPrerequisite>
   </RecipeDef>
+
+    </value>
+  </li>
+
+
+<!-- make antibiotics 4x recipe-->
+    <li Class="PatchOperationAdd">
+    <xpath>Defs</xpath>
+    <value>
+
+    <RecipeDef>
+    <defName>vre_antibiotics_bulk_patched_psykshrooms</defName>
+    <label>Make antibiotics 4x</label>
+    <description>Make antibiotics 4x.</description>
+    <jobString>Making antibiotics 4x.</jobString>
+    <effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_Drug</soundWorking>
+    <workSkill>Intellectual</workSkill>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workAmount>2400</workAmount>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPsykcaps</li>
+            <li>PsychoidLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MedicineHerbal</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawPsykcaps</li>
+        <li>PsychoidLeaves</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <VRE_Antibiotics>4</VRE_Antibiotics>
+    </products>
+	<researchPrerequisite>DrugProduction</researchPrerequisite>
+  </RecipeDef>
   
     </value>
   </li>
+
 
   </operations>
 </match>
