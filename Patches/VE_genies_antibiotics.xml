@@ -111,6 +111,10 @@
     </value>
   </li>
 
+    <!-- remove default stinky recipemaker-->
+    <li Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="VRE_Antibiotics"]/recipeMaker</xpath>
+    </li>
 
   </operations>
 </match>
