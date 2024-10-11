@@ -22,6 +22,7 @@
 
 <loadAfter>
   <li>syrchalis.processor.framework</li>
+  <li>vanillaracesexpanded.genie</li>
 </loadAfter>
 
 </ModMetaData>

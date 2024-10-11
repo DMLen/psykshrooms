@@ -1,0 +1,63 @@
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Vanilla Races Expanded - Genie</li>
+  </mods>
+  <match Class="PatchOperationSequence">
+  <operations>
+
+    <li Class="PatchOperationAdd">
+    <xpath>Defs</xpath>
+    <value>
+
+    <RecipeDef>
+    <defName>vre_antibiotics_patched_psykshrooms</defName>
+    <label>Make antibiotics</label>
+    <description>Make antibiotics.</description>
+    <jobString>Making antibiotics.</jobString>
+    <effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_Drug</soundWorking>
+    <workSkill>Intellectual</workSkill>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workAmount>600</workAmount>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawPsykcaps</li>
+            <li>PsychoidLeaves</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MedicineHerbal</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawPsykcaps</li>
+        <li>PsychoidLeaves</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <VRE_Antibiotics>1</VRE_Antibiotics>
+    </products>
+	<researchPrerequisite>DrugProduction</researchPrerequisite>
+  </RecipeDef>
+  
+    </value>
+  </li>
+
+  </operations>
+</match>
+</Operation>
+</Patch>
